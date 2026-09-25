@@ -18,7 +18,7 @@
   <meta property="og:title" content="NEXUS — Full Stack Web Development Team">
   <meta property="og:description"
     content="We build scalable web applications, modern websites, management systems, and intuitive digital experiences.">
-  <meta property="og:image" content="./logo.png">
+  <meta property="og:image" content="logo.png">
   <meta property="og:url" content="https://your-domain.com">
   <meta property="og:site_name" content="NEXUS">
 
@@ -26,12 +26,12 @@
   <meta name="twitter:title" content="NEXUS — Full Stack Web Development Team">
   <meta name="twitter:description"
     content="We build scalable web applications, modern websites, management systems, and intuitive digital experiences.">
-  <meta name="twitter:image" content="./logo.png">
+  <meta name="twitter:image" content="logo.png">
 
   <title>NEXUS | Deal With Us</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="./style.css">
-  <link rel="icon" href="./logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=code" />
 </head>
@@ -51,36 +51,36 @@
 
       <nav class="nav-links">
 
-        <a href="./index.html">
+        <a href="index.html">
           <i class="fa-solid fa-house"></i>
           Home
         </a>
 
-        <a href="./index.html#team">
+        <a href="index.html#team">
           <i class="fa-solid fa-users"></i>
           Team
         </a>
 
-        <a href="./index.html#tech">
+        <a href="index.html#tech">
           <span class="material-symbols-outlined">code</span>
           Technologies
         </a>
 
-        <a href="./portfolio.html">
+        <a href="portfolio.html">
           <i class="fa-solid fa-folder"></i>
           Work Samples
         </a>
 
       </nav>
 
-      <a href="./contact.html" class="cta-btn-nav">
+      <a href="contact.html" class="cta-btn-nav">
         Get in Touch
       </a>
 
     </div>
   </header>
 
-  <section class="contact" id="contact">
+  <section class="contact reveal-element" id="contact">
     <div class="container">
 
       <div class="contact-grid">
@@ -100,7 +100,7 @@
 
           <div class="contact-links">
 
-            <a href="sphinxallience@gmail.com" class="contact-pill">
+            <a href="mailto:sphinxallience@gmail.com" class="contact-pill">
               <i class="fa-solid fa-envelope"></i>
               <span>sphinxallience@gmail.com</span>
             </a>
@@ -119,8 +119,6 @@
           </div>
 
         </div>
-
-
         <!-- Project Request Form -->
         <div class="contact-form-wrapper">
 
@@ -139,8 +137,6 @@
 
                   <input type="text" id="name" name="name" placeholder="Your name" required>
                 </div>
-
-
                 <div class="form-group">
                   <label for="email">
                     Email
@@ -150,8 +146,6 @@
                 </div>
 
               </div>
-
-
               <div class="form-row">
 
                 <div class="form-group">
@@ -163,8 +157,6 @@
                   <input type="tel" id="phone" name="phone" placeholder="+20 1XXXXXXXXX" required>
 
                 </div>
-
-
                 <div class="form-group">
 
                   <label for="preferred-contact">
@@ -196,9 +188,6 @@
               </div>
 
             </div>
-
-
-
             <div class="form-section">
 
               <h3>About You / Your Organization</h3>
@@ -246,8 +235,6 @@
                 </select>
 
               </div>
-
-
               <div class="form-group">
 
                 <label for="organization-name">
@@ -260,8 +247,6 @@
               </div>
 
             </div>
-
-
             <div class="form-section">
 
               <h3>Project Information</h3>
@@ -317,8 +302,6 @@
                 </select>
 
               </div>
-
-
               <div class="form-group">
 
                 <label for="project-description">
@@ -329,8 +312,6 @@
                   placeholder="Tell us about your project, features, goals, and requirements..." required></textarea>
 
               </div>
-
-
               <div class="form-group">
 
                 <label for="current-website">
@@ -389,7 +370,6 @@
 
                 </div>
 
-
                 <div class="form-group">
 
                   <label for="deadline">
@@ -403,9 +383,6 @@
               </div>
 
             </div>
-
-
-
             <div class="form-section">
 
               <h3>Additional Requirements</h3>
@@ -417,6 +394,7 @@
                 </label>
 
                 <select id="design-status" name="design_status">
+
                   <option value="" disabled selected>
                     Select an option
                   </option>
@@ -436,21 +414,37 @@
                   <option value="no">
                     No, I need NEXUS to design it
                   </option>
-
                 </select>
-
               </div>
-
-
               <div class="form-group">
 
                 <label for="technologies">
-                  Preferred Technologies
-                  <span>(Optional)</span>
+                  Preferred Technologies / Systems
                 </label>
 
-                <input type="text" id="technologies" name="technologies"
-                  placeholder="React, Next.js, Node.js, MongoDB...">
+                <select id="technologies" name="technologies" required>
+
+                  <option value="" disabled selected>
+                    Select preferred technology or system
+                  </option>
+
+                  <option value="sass-advanced-css">
+                    Sass / Advanced CSS Design
+                  </option>
+
+                  <option value="erp-systems">
+                    ERP Systems & Business Dashboards
+                  </option>
+
+                  <option value="fullstack-laravel">
+                    Full-Stack Web Apps (PHP / Laravel)
+                  </option>
+
+                  <option value="custom-web-app">
+                    Custom Web Application
+                  </option>
+
+                </select>
 
               </div>
 
@@ -497,18 +491,19 @@
         <div>
           <h4 class="footer-title">Navigation</h4>
           <ul class="footer-links">
-            <li><a href="./index.html#about">About Nexus</a></li>
-            <li><a href="./index.html#team">Our Team</a></li>
-            <li><a href="./index.html#tech">Technologies</a></li>
-            <li><a href="./portfolio.html">Showcase</a></li>
+            <li><a href="index.html#about">About Nexus</a></li>
+            <li><a href="index.html#team">Our Team</a></li>
+            <li><a href="index.html#tech">Technologies</a></li>
+            <li><a href="portfolio.html">Showcase</a></li>
           </ul>
         </div>
         <div>
           <h4 class="footer-title">Connect</h4>
           <ul class="footer-links">
-            <li><a href="#"><i class="fa-brands fa-github" target="_blank"></i> GitHub Team</a></li>
-            <li><a href="#"><i class="fa-brands fa-linkedin" target="_blank"></i> LinkedIn</a></li>
-            <li><a href="nexus@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i> nexus@gmail.com</a></li>
+            <li><a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i> GitHub Team</a></li>
+            <li><a href="https://www.linkedin.com/company/nexus-dev" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+            <li><a href="mailto:nexus@gmail.com"><i class="fa-solid fa-envelope"></i> nexus@gmail.com</a></li>
           </ul>
         </div>
       </div>
@@ -516,8 +511,11 @@
         <p>&copy; 2026 NEXUS Team. All rights reserved. Built with passion and clean code.</p>
       </div>
     </div>
+    <button id="theme-toggle" class="floating-theme-btn" aria-label="Toggle theme">
+      <i class="fa-solid fa-moon" id="theme-icon"></i>
+    </button>
   </footer>
-  <script src="/scripts/index.js"></script>
+  <script src="index.js"></script>
 
 </body>
 
