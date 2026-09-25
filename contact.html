@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="description"
+    content="NEXUS is a full-stack web development team building scalable web applications, modern websites, management systems, and intuitive digital experiences.">
+
+  <meta name="keywords"
+    content="NEXUS, web development, full stack, web applications, websites, JavaScript, React, Node.js, software development">
+
+  <meta name="author" content="NEXUS Team">
+
+  <meta name="robots" content="index, follow">
+
+  <meta name="theme-color" content="#080b12">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NEXUS — Full Stack Web Development Team">
+  <meta property="og:description"
+    content="We build scalable web applications, modern websites, management systems, and intuitive digital experiences.">
+  <meta property="og:image" content="./logo.png">
+  <meta property="og:url" content="https://your-domain.com">
+  <meta property="og:site_name" content="NEXUS">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NEXUS — Full Stack Web Development Team">
+  <meta name="twitter:description"
+    content="We build scalable web applications, modern websites, management systems, and intuitive digital experiences.">
+  <meta name="twitter:image" content="./logo.png">
+
+  <title>NEXUS | Deal With Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./logo.png">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=code" />
+</head>
+
+<body>
+  <header>
+    <div class="container nav-container">
+
+      <div class="logo">
+        <img src="logo.png" alt="NEXUS" class="logo-img">
+        <span>NXS</span>
+      </div>
+
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="nav-links">
+
+        <a href="./index.html">
+          <i class="fa-solid fa-house"></i>
+          Home
+        </a>
+
+        <a href="./index.html#team">
+          <i class="fa-solid fa-users"></i>
+          Team
+        </a>
+
+        <a href="./index.html#tech">
+          <span class="material-symbols-outlined">code</span>
+          Technologies
+        </a>
+
+        <a href="./portfolio.html">
+          <i class="fa-solid fa-folder"></i>
+          Work Samples
+        </a>
+
+      </nav>
+
+      <a href="./contact.html" class="cta-btn-nav">
+        Get in Touch
+      </a>
+
+    </div>
+  </header>
+
+  <section class="contact" id="contact">
+    <div class="container">
+
+      <div class="contact-grid">
+
+        <div class="contact-info">
+
+          <span class="section-tag">Start a Project</span>
+
+          <h2 class="section-title">
+            Let's build something together
+          </h2>
+
+          <p class="contact-description">
+            Tell us about your project, your goals, budget, and timeline.
+            Our team will review your request and get back to you.
+          </p>
+
+          <div class="contact-links">
+
+            <a href="sphinxallience@gmail.com" class="contact-pill">
+              <i class="fa-solid fa-envelope"></i>
+              <span>sphinxallience@gmail.com</span>
+            </a>
+
+            <a href="https://www.linkedin.com/company/nexus-dev" target="_blank" rel="noopener noreferrer"
+              class="contact-pill">
+              <i class="fa-brands fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+
+            <a href="https://wa.me/201XXXXXXXXX" target="_blank" rel="noopener noreferrer" class="contact-pill">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- Project Request Form -->
+        <div class="contact-form-wrapper">
+
+          <form class="contact-form">
+
+            <div class="form-section">
+
+              <h3>Contact Information</h3>
+
+              <div class="form-row">
+
+                <div class="form-group">
+                  <label for="name">
+                    Full Name
+                  </label>
+
+                  <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+
+
+                <div class="form-group">
+                  <label for="email">
+                    Email
+                  </label>
+
+                  <input type="email" id="email" name="email" placeholder="you@email.com" required>
+                </div>
+
+              </div>
+
+
+              <div class="form-row">
+
+                <div class="form-group">
+
+                  <label for="phone">
+                    Phone / WhatsApp
+                  </label>
+
+                  <input type="tel" id="phone" name="phone" placeholder="+20 1XXXXXXXXX" required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                  <label for="preferred-contact">
+                    Preferred Contact
+                  </label>
+
+                  <select id="preferred-contact" name="preferred_contact" required>
+
+                    <option value="" disabled selected>
+                      Choose contact method
+                    </option>
+
+                    <option value="email">
+                      Email
+                    </option>
+
+                    <option value="whatsapp">
+                      WhatsApp
+                    </option>
+
+                    <option value="phone">
+                      Phone Call
+                    </option>
+
+                  </select>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+
+            <div class="form-section">
+
+              <h3>About You / Your Organization</h3>
+
+              <div class="form-group">
+
+                <label for="organization-type">
+                  Organization Type
+                </label>
+
+                <select id="organization-type" name="organization_type" required>
+
+                  <option value="" disabled selected>
+                    Select organization type
+                  </option>
+
+                  <option value="individual">
+                    Individual
+                  </option>
+
+                  <option value="startup">
+                    Startup
+                  </option>
+
+                  <option value="small-business">
+                    Small Business
+                  </option>
+
+                  <option value="company">
+                    Company
+                  </option>
+
+                  <option value="organization">
+                    Organization
+                  </option>
+
+                  <option value="educational">
+                    Educational Institution
+                  </option>
+
+                  <option value="other">
+                    Other
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="organization-name">
+                  Organization / Company Name
+                </label>
+
+                <input type="text" id="organization-name" name="organization_name"
+                  placeholder="Company or organization name">
+
+              </div>
+
+            </div>
+
+
+            <div class="form-section">
+
+              <h3>Project Information</h3>
+
+              <div class="form-group">
+
+                <label for="project-type">
+                  Project Type
+                </label>
+
+                <select id="project-type" name="project_type" required>
+
+                  <option value="" disabled selected>
+                    Select project type
+                  </option>
+
+                  <option value="website">
+                    Website
+                  </option>
+
+                  <option value="web-app">
+                    Web Application
+                  </option>
+
+                  <option value="ecommerce">
+                    E-Commerce
+                  </option>
+
+                  <option value="dashboard">
+                    Dashboard / Admin Panel
+                  </option>
+
+                  <option value="landing-page">
+                    Landing Page
+                  </option>
+
+                  <option value="portfolio">
+                    Portfolio
+                  </option>
+
+                  <option value="education-platform">
+                    Educational Platform
+                  </option>
+
+                  <option value="custom-system">
+                    Custom Management System
+                  </option>
+
+                  <option value="other">
+                    Other
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="project-description">
+                  Project Description
+                </label>
+
+                <textarea id="project-description" name="project_description" rows="5"
+                  placeholder="Tell us about your project, features, goals, and requirements..." required></textarea>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="current-website">
+                  Current Website / Reference
+                  <span>(Optional)</span>
+                </label>
+
+                <input type="url" id="current-website" name="current_website" placeholder="https://example.com">
+
+              </div>
+
+            </div>
+            <div class="form-section">
+
+              <h3>Budget & Timeline</h3>
+
+              <div class="form-row">
+
+                <div class="form-group">
+
+                  <label for="budget">
+                    Estimated Budget
+                  </label>
+
+                  <select id="budget" name="budget" required>
+
+                    <option value="" disabled selected>
+                      Select budget
+                    </option>
+
+                    <option value="under-5000">
+                      Less than 5,000 EGP
+                    </option>
+
+                    <option value="5000-10000">
+                      5,000 - 10,000 EGP
+                    </option>
+
+                    <option value="10000-25000">
+                      10,000 - 25,000 EGP
+                    </option>
+
+                    <option value="25000-50000">
+                      25,000 - 50,000 EGP
+                    </option>
+
+                    <option value="50000-plus">
+                      50,000+ EGP
+                    </option>
+
+                    <option value="not-sure">
+                      I'm not sure yet
+                    </option>
+
+                  </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                  <label for="deadline">
+                    Expected Deadline
+                  </label>
+
+                  <input type="date" id="deadline" name="deadline" required>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+
+            <div class="form-section">
+
+              <h3>Additional Requirements</h3>
+
+              <div class="form-group">
+
+                <label for="design-status">
+                  Do you have a design?
+                </label>
+
+                <select id="design-status" name="design_status">
+                  <option value="" disabled selected>
+                    Select an option
+                  </option>
+
+                  <option value="yes">
+                    Yes, I have a complete design
+                  </option>
+
+                  <option value="partial">
+                    I have a partial design
+                  </option>
+
+                  <option value="reference">
+                    I only have references
+                  </option>
+
+                  <option value="no">
+                    No, I need NEXUS to design it
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="technologies">
+                  Preferred Technologies
+                  <span>(Optional)</span>
+                </label>
+
+                <input type="text" id="technologies" name="technologies"
+                  placeholder="React, Next.js, Node.js, MongoDB...">
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="additional-notes">
+                  Additional Notes
+                  <span>(Optional)</span>
+                </label>
+
+                <textarea id="additional-notes" name="additional_notes" rows="4"
+                  placeholder="Anything else we should know?"></textarea>
+
+              </div>
+
+            </div>
+
+
+            <button type="submit" class="submit-btn">
+              <i class="fa-solid fa-paper-plane"></i>
+              Send Project Request
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <img src="logo.png" alt="NEXUS" class="logo-img">
+            <span>NXS</span>
+          </a>
+          <p>Building high-impact software solutions with precision, modern web standards, and transparent
+            collaboration.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="./index.html#about">About Nexus</a></li>
+            <li><a href="./index.html#team">Our Team</a></li>
+            <li><a href="./index.html#tech">Technologies</a></li>
+            <li><a href="./portfolio.html">Showcase</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="#"><i class="fa-brands fa-github" target="_blank"></i> GitHub Team</a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin" target="_blank"></i> LinkedIn</a></li>
+            <li><a href="nexus@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i> nexus@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 NEXUS Team. All rights reserved. Built with passion and clean code.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="/scripts/index.js"></script>
+
+</body>
+
+</html>
