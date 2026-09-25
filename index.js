@@ -30,41 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Animated Numbers Counter 
-    const statNumbers = document.querySelectorAll('.hero-stats h3');
-
-    function runCounter() {
-        statNumbers.forEach(counter => {
-            const targetText = counter.textContent;
-            const target = parseFloat(targetText);
-            const isFloat = targetText.includes('.');
-            const hasPlus = targetText.includes('+');
-            const hasPercent = targetText.includes('%');
-            
-            let count = 0;
-            const speed = 50; 
-            const increment = target / 40;
-
-            const updateCount = () => {
-                count += increment;
-                if (count < target) {
-                    counter.textContent = isFloat ? count.toFixed(1) : Math.floor(count);
-                    if (hasPlus) counter.textContent += '+';
-                    if (hasPercent) counter.textContent += '%';
-                    setTimeout(updateCount, speed);
-                } else {
-                    counter.textContent = targetText; 
-                }
-            };
-            updateCount();
-        });
-    }
-    
-    if (statNumbers.length > 0) {
-        runCounter();
-    }
-
-    // Scroll Reveal
+    // Skills Progress Animation
     const animatedElements = document.querySelectorAll('.timeline-item, .skills-box, .project-card, .service-card, .reveal-element');
 
     const observer = new IntersectionObserver((entries, observerInstance) => {
@@ -85,9 +51,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { threshold: 0.15 });
 
-    animatedElements.forEach(el => observer.observe(el));
+    animatedElements.forEach(el => {
+        observer.observe(el);
+        
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+            el.classList.add('show-element', 'show');
+            const progressSpans = el.querySelectorAll('.progress-line span');
+            progressSpans.forEach(span => {
+                const targetWidth = span.getAttribute('data-width');
+                if (targetWidth) {
+                    span.style.width = targetWidth;
+                }
+            });
+        }
+    });
 
-    // Scroll to Top Button 
+    // Scroll to Top Button
     const scrollTopBtn = document.createElement('button');
     scrollTopBtn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
     scrollTopBtn.className = 'scroll-top-btn';
@@ -125,15 +105,67 @@ document.addEventListener('DOMContentLoaded', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Sticky Navbar 
-    const header = document.querySelector('header');
-    if (header) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled-nav');
-            } else {
-                header.classList.remove('scrolled-nav');
+    // Animated Numbers Counter
+    const statNumbers = document.querySelectorAll('.hero-stats h3');
+
+    function runCounter() {
+        statNumbers.forEach(counter => {
+            const targetText = counter.textContent;
+            const target = parseFloat(targetText);
+            const isFloat = targetText.includes('.');
+            const hasPlus = targetText.includes('+');
+            const hasPercent = targetText.includes('%');
+            
+            let count = 0;
+            const speed = 50; 
+            const increment = target / 40;
+
+            const updateCount = () => {
+                count += increment;
+                if (count < target) {
+                    counter.textContent = isFloat ? count.toFixed(1) : Math.floor(count);
+                    if (hasPlus) counter.textContent += '+';
+                    if (hasPercent) counter.textContent += '%';
+                    setTimeout(updateCount, speed);
+                } else {
+                    counter.textContent = targetText; 
+                }
+            };
+            updateCount();
+        });
+    }
+    
+    if (statNumbers.length > 0) {
+        runCounter();
+    }
+    
+    //Dark & Light Mode Toggle
+
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+
+    if (localStorage.getItem('theme') === 'light') {
+        document.body.classList.add('light-mode');
+        if (themeIcon) {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+    }
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            const isLight = document.body.classList.contains('light-mode');
+            
+            if (themeIcon) {
+                if (isLight) {
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                } else {
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                }
             }
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
         });
     }
 
